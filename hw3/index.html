@@ -72,7 +72,7 @@ Show images with normal shading for a few small .dae files. -->
     in world space. This is now a vector from the origin to the pixel's corresponding location in world-space. We multiply it by a matrix to convert it into a direction 
     from the camera, and then define it to be our ray's direction with the camera's location being the origin. 
     
-    Now, a given pixel may cover a small area of the scene in world space, so we sampler smaller locations within this pixel and shoot rays at them, and then average the amount of light
+    Now, a given pixel may cover a complex area of the scene in world space, so we sampler smaller locations within this pixel's respective location and shoot rays at them, and then average the amount of light
     that is reflected back from each sample ray for this particular pixel & update its pixel value. This is called ray_tracing. To determine the amount of light from a pixel, we loop through
     the primitives, triangles or spheres that build up complex scenes, and see which primitive had the shortest intersection time, and then deduce the amount of light that would be reflected off of it
     in the direction of the incoming ray & update the ray's associated intersection data structure with all the information necessary for rendering. 
@@ -561,11 +561,11 @@ Pick one scene and render it with at least 2048 samples per pixel. Show a good s
     <tr align="center">
       <td>
         <img src="images/sphere_p5.png" align="middle" width="400px"/>
-        <figcaption>Rendered image (cbunny.dae)</figcaption>
+        <figcaption>Rendered image (CBspheres_lambertian.dae)</figcaption>
       </td>
       <td>
         <img src="images/sphere_p5_rate.png" align="middle" width="400px"/>
-        <figcaption>Sample rate image (cbunny.dae)</figcaption>
+        <figcaption>Sample rate image (CBspheres_lambertian.dae)</figcaption>
       </td>
     </tr>
     <tr align="center">
